@@ -23,6 +23,7 @@
     "author": "Vinh Ngo <vintrungngo1907@gmail.com>",
     "license": "ISC",
     "dependencies": {
+        "@v-libs/node-infrastructure": "workspace:*",
         "bcrypt": "^5.0.1",
         "body-parser": "^1.19.2",
         "cookie-parser": "^1.4.6",
@@ -33,6 +34,7 @@
         "typeorm": "^0.3.6"
     },
     "devDependencies": {
+        "@v-libs/eslint-plugins": "1.1.0",
         "@types/cors": "~2.8.12",
         "@types/express": "^4.17.13",
         "@types/jest": "~27.4.1",
