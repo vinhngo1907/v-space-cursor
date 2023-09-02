@@ -14,11 +14,11 @@ importers:
       pretty-quick: 3.1.3_prettier@2.6.2
       turbo: 1.2.4
 
-  apps/gln-space-auth-service:
+  apps/v-space-auth-service:
     specifiers:
-      '@gln-libs/cli': workspace:*
-      '@gln-libs/eslint-plugins': 1.1.0
-      '@gln-libs/node-infrastructure': workspace:*
+      '@v-libs/cli': workspace:*
+      '@v-libs/eslint-plugins': 1.1.0
+      '@v-libs/node-infrastructure': workspace:*
       '@types/cors': ~2.8.12
       '@types/express': ^4.17.13
       '@types/jest': ~27.4.1
@@ -45,8 +45,8 @@ importers:
       typeorm: ^0.3.6
       typescript: 4.6.3
     dependencies:
-      '@gln-libs/cli': link:../../libs/gln-cli
-      '@gln-libs/node-infrastructure': link:../../libs/gln-node-infrastructure
+      '@v-libs/cli': link:../../libs/v-cli
+      '@v-libs/node-infrastructure': link:../../libs/v-node-infrastructure
       bcrypt: 5.0.1
       body-parser: 1.20.0
       cookie-parser: 1.4.6
@@ -56,7 +56,7 @@ importers:
       pg: 8.7.3
       typeorm: 0.3.6_pg@8.7.3+ts-node@10.7.0
     devDependencies:
-      '@gln-libs/eslint-plugins': link:../../libs/eslint-plugins
+      '@v-libs/eslint-plugins': link:../../libs/eslint-plugins
       '@types/cors': 2.8.12
       '@types/express': 4.17.13
       '@types/jest': 27.4.1
@@ -75,11 +75,11 @@ importers:
       tscpaths: 0.0.9
       typescript: 4.6.3
 
-  apps/gln-space-user-task-service:
+  apps/v-space-user-task-service:
     specifiers:
-      '@gln-libs/cli': workspace:*
-      '@gln-libs/eslint-plugins': 1.0.0
-      '@gln-libs/node-infrastructure': workspace:*
+      '@v-libs/cli': workspace:*
+      '@v-libs/eslint-plugins': 1.0.0
+      '@v-libs/node-infrastructure': workspace:*
       '@types/cors': ~2.8.12
       '@types/express': ^4.17.13
       '@types/jest': ~27.4.1
@@ -106,8 +106,8 @@ importers:
       typeorm: ^0.3.6
       typescript: 4.6.3
     dependencies:
-      '@gln-libs/cli': link:../../libs/gln-cli
-      '@gln-libs/node-infrastructure': link:../../libs/gln-node-infrastructure
+      '@v-libs/cli': link:../../libs/v-cli
+      '@v-libs/node-infrastructure': link:../../libs/v-node-infrastructure
       body-parser: 1.20.0
       cookie-parser: 1.4.6
       cors: 2.8.5
@@ -116,7 +116,7 @@ importers:
       pg: 8.7.3
       typeorm: 0.3.6_pg@8.7.3+ts-node@10.7.0
     devDependencies:
-      '@gln-libs/eslint-plugins': 1.0.0_f11458f3b5a9aac7eb7b6e83671a32b3
+      '@v-libs/eslint-plugins': 1.0.0_f11458f3b5a9aac7eb7b6e83671a32b3
       '@types/cors': 2.8.12
       '@types/express': 4.17.13
       '@types/jest': 27.4.1
@@ -136,7 +136,7 @@ importers:
       tscpaths: 0.0.9
       typescript: 4.6.3
 
-  apps/gln-space-webapp:
+  apps/v-space-webapp:
     specifiers:
       '@types/react': ^18.0.0
       '@types/react-dom': ^18.0.0
@@ -186,7 +186,7 @@ importers:
       read-pkg-up: 7.0.1
       semver: 7.3.7
 
-  libs/gln-cli:
+  libs/v-cli:
     specifiers:
       glob-parent: ^6.0.2
       minimist: ^1.2.6
@@ -196,7 +196,7 @@ importers:
       minimist: 1.2.6
       ts-import: 4.0.0-beta.2
 
-  libs/gln-node-infrastructure:
+  libs/v-node-infrastructure:
     specifiers:
       '@types/express': ^4.17.13
       '@types/jest': ~27.5.0
@@ -245,7 +245,7 @@ importers:
       ts-jest: 28.0.2_572f5494b613c4a635e3e9455bd5a3d7
       typescript: 4.6.4
 
-  libs/gln-templates:
+  libs/v-templates:
     specifiers:
       command-exists: ^1.2.9
       kolorist: ^1.5.1
@@ -774,7 +774,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@gln-libs/eslint-plugins/1.0.0_f11458f3b5a9aac7eb7b6e83671a32b3:
+  /@v-libs/eslint-plugins/1.0.0_f11458f3b5a9aac7eb7b6e83671a32b3:
     resolution: {integrity: sha512-LoU0s0IDBuqD9KFr6YCXZKJipoqK5m8Qhf0d6BeO19ISDVHUm+Q2qydSfEWgtFeiWbw1Lc/+66Qqvq+zRv4U0A==}
     peerDependencies:
       eslint: ^7.28.0
@@ -4817,7 +4817,7 @@ packages:
     dev: true
 
   /is-yarn-global/0.3.0:
-    resolution: {integrity: sha512-VjSeb/lHmkoyd8ryPVIKvOCn4D1koMqY+vqyjjUfc3xyKtP4dYOxM44sZrnqQSzSds3xyOrUTLTC9LVCVgLngw==}
+    resolution: {integrity: sha512-VjSeb/lHmkoyd8ryPVIKvOCn4D1koMqY+vqyjjUfc3xyKtP4dYOxM44sZrnqQSzSds3xyOrUTLTC9LVCVvgw==}
     dev: true
 
   /isarray/1.0.0:
