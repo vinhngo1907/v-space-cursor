@@ -1,4 +1,2 @@
-module.exports = {
-    CartModel: require("./Cart"),
-    OrderModel: require("./Order")
-}
+export * from "./example";
+export * from "./userTask";
