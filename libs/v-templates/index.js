@@ -104,7 +104,7 @@ async function start() {
         throw new Error('Unsupported template');
     }
 
-    const defaultProjectName = !targetDir ? 'gln-app' : targetDir;
+    const defaultProjectName = !targetDir ? 'v-app' : targetDir;
     const templateOptions = TEMPLATE_VARIANTS[templateObject.type];
 
     let result = {};

@@ -5,7 +5,7 @@
     "author": "gialynguyen",
     "private": false,
     "bin": {
-        "gln-templates": "index.js",
+        "v-templates": "index.js",
         "glnt": "index.js"
     },
     "files": [
