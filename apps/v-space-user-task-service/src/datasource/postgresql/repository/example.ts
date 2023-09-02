@@ -1,1 +1,1 @@
-import {createBaseRepository} from "@gln-libs/node-infrastructure";
+import {createBaseRepository} from "@v-libs/node-infrastructure";
