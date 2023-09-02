@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "bin": {
-        "gln-cli": "./index.js"
+        "v-cli": "./index.js"
     },
     "files": [
         "index.js"
