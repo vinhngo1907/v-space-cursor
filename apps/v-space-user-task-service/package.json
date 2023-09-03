@@ -25,7 +25,6 @@
     "license": "ISC",
     "dependencies": {
         "@v-libs/node-infrastructure": "workspace:*",
-        "@v-libs/cli": "workspace:*",
         "body-parser": "^1.19.2",
         "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
