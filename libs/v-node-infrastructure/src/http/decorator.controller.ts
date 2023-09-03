@@ -1,7 +1,6 @@
 import {
     HttpController,
     HttpControllerMethodHander,
-    HttpHandlerSubject,
     META_DATA
 } from "./class.controller";
 import { HttpHandleMethod } from "./method.http";

@@ -1,15 +1,15 @@
-import { Response as ResponseBase } from "express";
+import { Response as ResponseBase } from 'express';
 
 export type ResponseUtils = {
     resSuccess(data?: unknown): ResponseUtils;
     resError(
-        message: String,
+        message: string,
         otherPayload?: Record<string, unknown>,
         options?: {
             statusCode?: number;
         }
-    ): ResponseUtils
-}
+    ): ResponseUtils;
+};
 
 export type Response = ResponseBase & ResponseUtils;
 

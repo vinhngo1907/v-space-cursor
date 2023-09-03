@@ -24,7 +24,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@v-libs/node-infrastructure": "workspace:*",
+        "@v-libs/node-infrastructure": "0.3.7",
         "body-parser": "^1.19.2",
         "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
@@ -34,13 +34,13 @@
         "typeorm": "^0.3.6"
     },
     "devDependencies": {
-        "@v-libs/eslint-plugins": "1.0.0",
         "@types/cors": "~2.8.12",
         "@types/express": "^4.17.13",
         "@types/jest": "~27.4.1",
         "@types/node": "~17.0.25",
         "@types/shelljs": "~0.8.11",
         "@types/supertest": "~2.0.11",
+        "@v-libs/eslint-plugins": "1.0.0",
         "eslint": "~8.13.0",
         "jest": "~27.5.1",
         "nodemon": "^2.0.15",

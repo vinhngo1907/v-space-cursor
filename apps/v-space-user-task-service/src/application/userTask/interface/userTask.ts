@@ -7,3 +7,10 @@ export type UserTask = {
 }
 
 export type UserTaskServiceRes = UserTask;
+
+export type UpdateUserTaskPayload = {
+    title?: string;
+    description?: string;
+    startTime?: string;
+    endTime?: string;
+};
