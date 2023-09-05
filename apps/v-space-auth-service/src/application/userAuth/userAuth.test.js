@@ -1,5 +1,5 @@
 // which service it is
-describe("CustomerService", () => {
+describe("AuthService", () => {
     // Which function i am testing
     describe("Login", () => {
         // Which Scenario we are testing

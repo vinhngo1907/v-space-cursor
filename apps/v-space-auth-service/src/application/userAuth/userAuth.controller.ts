@@ -6,7 +6,7 @@ import {
     Response,
     Route,
     Router,
-} from '@gln-libs/node-infrastructure';
+} from '@v-libs/node-infrastructure';
 import * as bcrypt from 'bcrypt';
 import { UserAuth } from './interface/userAuth';
 import { UserAuthService } from './userAuth.service';
