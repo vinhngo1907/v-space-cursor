@@ -1,8 +1,21 @@
-// import { UserAuthRepository } from '@datasource/postgresql';
-import { UserAuth, UserAuthReponse } from './interface/userAuth';
+import {
+    Controller,
+    HttpBodyValidate,
+    HttpController,
+    Request,
+    Response,
+    Route,
+    Router,
+} from '@gln-libs/node-infrastructure';
+import * as bcrypt from 'bcrypt';
+import { UserAuth } from './interface/userAuth';
+import { UserAuthService } from './userAuth.service';
 
-export class UserAuthService {
-    async createUserAuth(payload: UserAuth):Promise<void>{
-
+@Controller('/auth')
+export class UserAuthController extends HttpController {
+    userAuthService: UserAuthService;
+    constructor(router: Router) {
+        super(router);
+        this.userAuthService = new UserAuthService();
     }
 }
