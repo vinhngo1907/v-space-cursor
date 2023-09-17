@@ -26,6 +26,8 @@ export const connectPostgreSqlDataSources = async (
         dropSchema: options?.dropSchema || false,
         migrationsRun: options?.migrationsRun || false,
     });
+    
     primaryDataSource.setOptions(dataSourceOptions);
+    
     await primaryDataSource.initialize();
 }
