@@ -28,9 +28,9 @@
             "*.d.ts",
             "types/*.d.ts"
         ],
-        "types": [
-            "@types/jest"
-        ]
+        // "types": [
+        //     "@types/jest"
+        // ]
     },
     "include": [
         "src",
