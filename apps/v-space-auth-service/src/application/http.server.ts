@@ -1,4 +1,4 @@
-import { httpLogger, ResponseUtils } from "@v-libs/node-infrastructure";
+import { httpLogger, ResponseUtils } from '@v-libs/node-infrastructure';
 import express from "express";
 
 import { AppConfig } from "./configs";
@@ -14,14 +14,33 @@ const setupAppMiddlewares = (app: express.Express) => {
     app.use(corsMiddleware(AppConfig.HttpServer.CORS));
     app.use(express.json());
     app.use(
-        express.urlencoded({extended: true})
+        express.urlencoded({ extended: true })
     );
 }
 
 const initializeControllers = (router: express.Router): void => {
     new UserAuthController(router);
-  };
-  
-  const setupBackgroundAppMiddlewares = (app: express.Express) => {
+};
+
+const setupBackgroundAppMiddlewares = (app: express.Express) => {
     app.use(errorHandlerMiddleware);
-  };
+};
+
+export const startHttpServer = (): void => {
+    const { port } = AppConfig.HttpServer;
+
+    const app = express();
+
+    setupAppMiddlewares(app);
+
+    const apiRouter = express.Router();
+    initializeControllers(apiRouter);
+
+    app.use('/api/v1', apiRouter);
+
+    setupBackgroundAppMiddlewares(app);
+
+    app.listen(port, () => {
+        global.logger.info(`HttpServer started on port ${port}`);
+    })
+}
