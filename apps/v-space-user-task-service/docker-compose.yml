@@ -3,6 +3,7 @@ version: '2.4'
 networks:
   user-task-service:
     driver: brigde
+
 services:
   postgres:
     container_name: user-task-postgres
