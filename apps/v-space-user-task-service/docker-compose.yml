@@ -1,0 +1,34 @@
+version: '2.4'
+
+networks:
+  user-task-service:
+    driver: brigde
+services:
+  postgres:
+    container_name: user-task-postgres
+    image: postgres
+    ports:
+      - '5250:5432'
+    volumes:
+      - /var/v-space/user-task-service/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=user-task
+      - POSTGRES_PASSWORD=v1122
+    networks:
+      - user-task-service
+  api-service:
+    container_name: user-task-api
+    build:
+      dockerfile: Dockerfile
+    networks:
+      - user-task-service
+    ports:
+      - '10002:1337'
+    depends_on:
+      - postgres
+  dev-resources:
+    image: docksal/empty
+    restart: 'no'
+    depends_on:
+      - postgres
