@@ -1,5 +1,5 @@
 import ORMConfig from 'ormconfig';
-import { DataSource, DataSourceOptions } from 'typeorm';
+import { DataSource } from 'typeorm';
 
 export type PostgresConnectionOptions = {
     /**
