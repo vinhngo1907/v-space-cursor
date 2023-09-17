@@ -1,6 +1,6 @@
 export type UserAuth = {
     id: string;
-    firstName: string;
+    fisrtName: string;
     lastName: string;
     password: string;
     email: string;
@@ -9,11 +9,11 @@ export type UserAuth = {
 
     createdAt: number;
     updatedAt: number;
-}
+};
 
 export type SignUpPayload = Omit<
     UserAuth,
     'id' | 'status' | 'createdAt' | 'updatedAt'
 >;
 
-export type UserAuthReponse = Omit<UserAuth, 'password'>;
+export type UserAuthRepsone = Omit<UserAuth, 'password'>;

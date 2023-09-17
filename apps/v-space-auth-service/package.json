@@ -23,7 +23,7 @@
     "author": "Vinh Ngo <vintrungngo1907@gmail.com>",
     "license": "ISC",
     "dependencies": {
-        "@v-libs/node-infrastructure": "workspace:*",
+        "@v-libs/node-infrastructure": "^0.3.7",
         "bcrypt": "^5.0.1",
         "body-parser": "^1.19.2",
         "cookie-parser": "^1.4.6",

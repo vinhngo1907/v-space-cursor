@@ -1165,10 +1165,10 @@
     eslint-plugin-react-hooks "^4.3.0"
     eslint-plugin-simple-import-sort "^7.0.0"
 
-"@v-libs/node-infrastructure@workspace:*":
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/@v-libs/node-infrastructure/-/node-infrastructure-0.3.6.tgz#4097d6d47ea283ca4f06f9a7e05e5a2fc6f5dea8"
-  integrity sha512-vtiGBiVnBSSRIthfWN1COiSxaBEAnmORYGhBu9deaNo+resYuBqOo8cUtaNupAczea2DYpXcxft83evzQjhOlg==
+"@v-libs/node-infrastructure@^0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@v-libs/node-infrastructure/-/node-infrastructure-0.3.7.tgz#b6df31fb9128ba88bbc04479d471667d0e4fd1bf"
+  integrity sha512-BXJQv57bkkYJDh0ww8ZDa6lS1ik5R8EUKK2RoL9Qbm4zdDbOJlczmmuJBp3Bg7qkTGPQZ5skewQBP+sqzDusXA==
   dependencies:
     class-transformer "^0.5.1"
     class-transformer-validator "^0.9.1"
