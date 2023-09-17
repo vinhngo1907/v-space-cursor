@@ -24,3 +24,23 @@ export class CreateUserTaskRequestBodySchema implements Partial<UserTask> {
 	@IsOptional()
 	endTime: string;
 }
+
+export class UpdateUserTaskRequestBodySchema implements Partial<UpdateUserTaskPayload>{
+	@IsString()
+	@MaxLength(50)
+	@IsOptional()
+	title?: string;
+
+	@IsString()
+	@MaxLength(255)
+	@IsOptional()
+	description: string;
+
+	@IsDateString()
+	@IsOptional()
+	startTime: string;
+
+	@IsDateString()
+	@IsOptional()
+	endTime: string;
+}
