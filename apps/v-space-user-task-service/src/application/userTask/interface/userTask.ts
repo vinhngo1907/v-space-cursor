@@ -4,7 +4,7 @@ export type UserTask = {
     description?: string;
     startTime: string;
     endTime?: string;
-}
+};
 
 export type UserTaskServiceRes = UserTask;
 

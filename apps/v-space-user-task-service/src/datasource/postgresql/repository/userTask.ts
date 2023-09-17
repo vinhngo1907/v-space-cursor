@@ -1,20 +1,10 @@
-import { BaseEntity } from "@v-libs/node-infrastructure";
-import { Column, Entity } from "typeorm";
+import { createBaseRepository } from '@v-libs/node-infrastructure';
 
-@Entity('userTask')
-export class UserTaskEntity extends BaseEntity {
-    @Column({ type: 'varchar', length: 48 })
-    customeId: string;
+import { primaryDataSource } from '../datasource';
+import { UserTaskEntity } from '../entity/userTask';
 
-    @Column({ type: 'varchar', length: 50 })
-    title: string;
-
-    @Column({ type: 'varchar', length: 255, nullable: true })
-    description: string;
-
-    @Column({ type: 'timestamptz' })
-    startTime: string;
-
-    @Column({ type: 'timestamptz', nullable: true })
-    endTime: string;
-}
+export const UserTaskRepository = primaryDataSource
+    .getRepository(UserTaskEntity)
+    .extend({
+        ...createBaseRepository<UserTaskEntity>(),
+    });
