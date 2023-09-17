@@ -1,11 +1,17 @@
-import { BaseEntity } from "@v-libs/node-infrastructure";
-import { Column, Entity } from "typeorm";
+import { createBaseRepository } from '@v-libs/node-infrastructure';
 
-@Entity('example')
-export class ExampleEntity extends BaseEntity {
-    @Column({
-        type: "varchar",
-        length: 50
-    })
-    name: string;
-}
+import { primaryDataSource } from '../datasource';
+import { ExampleEntity } from '../entity/example';
+
+export const ExampleRepository = primaryDataSource
+  .getRepository(ExampleEntity)
+  .extend({
+    ...createBaseRepository<ExampleEntity>(),
+    async findByName(name: string): Promise<ExampleEntity[]> {
+      const example = await this.find({
+        name,
+      });
+
+      return example;
+    },
+  });
