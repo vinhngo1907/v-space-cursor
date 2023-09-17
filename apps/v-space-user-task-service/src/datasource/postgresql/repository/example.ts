@@ -4,14 +4,14 @@ import { primaryDataSource } from '../datasource';
 import { ExampleEntity } from '../entity/example';
 
 export const ExampleRepository = primaryDataSource
-  .getRepository(ExampleEntity)
-  .extend({
-    ...createBaseRepository<ExampleEntity>(),
-    async findByName(name: string): Promise<ExampleEntity[]> {
-      const example = await this.find({
-        name,
-      });
+    .getRepository(ExampleEntity)
+    .extend({
+        ...createBaseRepository<ExampleEntity>(),
+        async findByName(name: string): Promise<ExampleEntity[]> {
+            const example = await this.find({
+                name,
+            });
 
-      return example;
-    },
-  });
+            return example;
+        },
+    });
