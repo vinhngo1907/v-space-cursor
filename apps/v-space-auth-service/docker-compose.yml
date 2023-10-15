@@ -10,16 +10,20 @@ services:
     volumes:
       - ./var/v-space/auth-service/data:/var/lib/postgresql/data
     ports:
-      - '5251:5321'
+      - '${POSTGRES_PORT}:5432'
+    networks:
+      - auth-service
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=auth
-      - POSTGRES_PASSWORD=ntv123123
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    
   api-server:
-    container_name: api-server
+    container_name: auth-api
     build:
       dockerfile: Dockerfile
-      context: ./v-space-auth-service
+    networks:
+      - auth-service
     ports:
       - '1002:1337'
     depends_on:
@@ -28,6 +32,6 @@ services:
 
   dev-resources:
     image: docksal/empty
+    restart: 'no'
     depends_on:
       - postgres
-    restart: 'no'
