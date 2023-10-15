@@ -20,7 +20,7 @@ const dataSourceOptions = {
 export const primaryDataSource = new DataSource(dataSourceOptions);
 
 export const connectPostgreSqlDataSources = async (
-    options: PostgresConnectionOptions
+    options?: PostgresConnectionOptions
 ): Promise<void> => {
     Object.assign(dataSourceOptions, {
         dropSchema: options?.dropSchema || false,

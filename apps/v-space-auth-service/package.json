@@ -16,13 +16,14 @@
         "debug": "node --inspect -r tsconfig-paths/register -r ts-node/register index.ts",
         "test": "ENV_FILE=.env.test jest",
         "test:watch": "npm run test -- --watch",
-        "migration:generate": "dotenv -e .env -- v-cli typeorm migration:generate -d ./src/datasource/postgresql/datasource.ts",
-        "migration:run": "dotenv -e .env -- v-cli typeorm migration:run -d ./src/datasource/postgresql/datasource.ts"
+        "migration:generate": "v-cli typeorm migration:generate -n migration -d ./src/datasource/postgresql/datasource.ts",
+        "migration:run": "v-cli typeorm migration:run -d ./src/datasource/postgresql/datasource.ts"
     },
     "keywords": [],
     "author": "Vinh Ngo <vintrungngo1907@gmail.com>",
     "license": "ISC",
     "dependencies": {
+        "@v-libs/cli": "1.0.0",
         "@v-libs/node-infrastructure": "^0.3.7",
         "bcrypt": "^5.0.1",
         "body-parser": "^1.19.2",
