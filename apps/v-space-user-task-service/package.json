@@ -2,6 +2,7 @@
     "name": "shopping",
     "version": "1.0.0",
     "description": "",
+    "private": true,
     "main": "index.js",
     "scripts": {
         "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./ -o ./dist",
@@ -21,7 +22,7 @@
         "migration:run": "v-cli typeorm migration:run -d ./src/datasource/postgresql/datasource.ts"
     },
     "keywords": [],
-    "author": "",
+    "author": "Henry Ngo <vinhngotrung1999@gmail.com>",
     "license": "ISC",
     "dependencies": {
         "@v-libs/cli": "1.0.0",

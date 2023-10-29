@@ -1,4 +1,4 @@
-import { DefaultLogger } from '@v-libs/node-infrastructure';
+import { DefaultLogger } from '@gln-libs/node-infrastructure';
 
 declare global {
 	interface IPrototype {
