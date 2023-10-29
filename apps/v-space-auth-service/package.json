@@ -20,7 +20,7 @@
         "migration:run": "v-cli typeorm migration:run -d ./src/datasource/postgresql/datasource.ts"
     },
     "keywords": [],
-    "author": "Vinh Ngo <vintrungngo1907@gmail.com>",
+    "author": "Vinh Ngo <vinhtrungngo1907@gmail.com>",
     "license": "ISC",
     "dependencies": {
         "@v-libs/cli": "1.0.0",
