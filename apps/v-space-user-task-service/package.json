@@ -17,7 +17,7 @@
         "debug": "node --inspect -r tsconfig-paths/register -r ts-node/register index.ts",
         "test": "ENV_FILE=.env.test jest",
         "test:watch": "npm run test -- --watch",
-        "migration:generate": "v-cli typeorm migration:generate -d ./src/datasource/postgresql/datasource.ts",
+        "migration:generate": "v-cli typeorm migration:generate -n migration -d ./src/datasource/postgresql/datasource.ts",
         "migration:run": "v-cli typeorm migration:run -d ./src/datasource/postgresql/datasource.ts"
     },
     "keywords": [],
