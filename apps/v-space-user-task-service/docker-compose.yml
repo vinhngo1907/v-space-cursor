@@ -12,10 +12,12 @@ services:
       - '5250:5432'
     volumes:
       - /var/v-space/user-task-service/data:/var/lib/postgresql/data
+    env_file:
+      - .env
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_DB=user-task
-      - POSTGRES_PASSWORD=v1122
+      - POSTGRES_PASSWORD=${POSTGRES_DATABASE
     networks:
       - user-task-service
   api-service:
