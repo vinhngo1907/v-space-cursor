@@ -15,9 +15,9 @@ services:
     env_file:
       - .env
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=user-task
-      - POSTGRES_PASSWORD=${POSTGRES_DATABASE
+      - POSTGRES_USER=${POSTGRES_HOST}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_PASSWORD=${POSTGRES_DATABASE}
     networks:
       - user-task-service
   api-service:
